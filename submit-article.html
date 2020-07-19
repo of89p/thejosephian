@@ -57,25 +57,28 @@
     <section class="nav">
       <a href="/" class="mx-auto"><h1 class="branding">Large</h1></a>
     </section>
-    <div class="container-custom">
-      <h2 class="blog-post-title">Write to us</h2>
+    <form name="contact" method="POST" data-netlify="true">
       <p>
-        Large was created as a mean for discourse, conversation and debate
-        between Josephians. Your contribution would mean a lot to this platform.
-        Your contribution can come in the form as a snippet or regular article.
-        A snippet would fall in the "Snippet" category, while a regular
-        article's category can be chosen by you.
+        <label>Your Name: <input type="text" name="name" /></label>
       </p>
-      <a href="/submit-article">Submit an article or snippet</a>
-      <br /><br />
-      <h2 class="blog-post-title">Write for us</h2>
       <p>
-        Writing to us(above), would mean you are a guest contributor. Should you
-        choose to write <em>for</em> us, you are a regular. Meaning, you would
-        contribute every week with at least one article. Writing for us is not
-        an option yet(opening soon perhaps :)), so for now all contributions
-        would be as guests.
+        <label>Your Email: <input type="email" name="email" /></label>
       </p>
-    </div>
+      <p>
+        <label
+          >Your Role:
+          <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label
+        >
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   </body>
 </html>
