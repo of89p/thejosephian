@@ -6,8 +6,18 @@
     <title>Redirect</title>
 </head>
 <body>
+    
+      <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+    crossorigin="anonymous"
+  ></script>
+
     <script>
-      window.location.replace("https://thebuses.000webhostapp.com/random/eoyreminder2020/addpeople?token=$token");
+       const { token } = Qs.parse(location.search, {
+        ignoreQueryPrefix: true,
+      });
+      window.location.replace(`https://thebuses.000webhostapp.com/random/eoyreminder2020/addpeople?token=${token}`);
     </script>
 </body>
 </html>
