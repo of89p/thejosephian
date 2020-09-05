@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+    
+      <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+    crossorigin="anonymous"
+  ></script>
+
+    <script>
+       const { token } = Qs.parse(location.search, {
+        ignoreQueryPrefix: true,
+      });
+      window.location.replace(`https://thebuses.000webhostapp.com/random/eoyreminder2020/unsub?token=${token}`);
+    </script>
+</body>
+</html>
